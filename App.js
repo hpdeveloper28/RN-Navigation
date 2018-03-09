@@ -15,6 +15,8 @@ import {
 import { StackNavigator } from 'react-navigation';
 import Splash from './MyApp/Splash/Splash'
 import Home from './MyApp/Home/Home'
+import ContactList from './MyApp/Contact/ContactList'
+import ContactDetails from './MyApp/Contact/ContactDetails'
 
 const RootStack = StackNavigator(
   {
@@ -24,9 +26,15 @@ const RootStack = StackNavigator(
     Splash: {
       screen: Splash,
     },
+    ContactList: {
+      screen: ContactList,
+    },
+    ContactDetails: {
+      screen: ContactDetails,
+    },
   },
   {
-    initialRouteName: 'Splash',
+    initialRouteName: 'ContactList',
   }
 )
 
