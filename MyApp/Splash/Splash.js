@@ -12,6 +12,7 @@ import {
     View,
     TouchableOpacity,
 } from 'react-native'
+import TextViewComponent from '../CustomComponents/TextViewComponent'
 
 export default class Splash extends React.Component {
 
@@ -35,6 +36,8 @@ export default class Splash extends React.Component {
               Click me!
           </Text>
           </TouchableOpacity>
+
+          <TextViewComponent/>
         </View>
       );
     }
