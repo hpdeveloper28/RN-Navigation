@@ -10,6 +10,7 @@ import {
     StyleSheet,
     Text,
     View,
+    Alert,
     TouchableOpacity,
 } from 'react-native'
 
@@ -25,8 +26,8 @@ export default class Home extends React.Component {
                 <TouchableOpacity
                     style={styles.button}>
                     <Text style={styles.instructions}>
-                        Welcome to Dashboard
-        </Text>
+                        {this.props.navigation.state.params.user_name}
+                    </Text>
                 </TouchableOpacity>
             </View>
         );

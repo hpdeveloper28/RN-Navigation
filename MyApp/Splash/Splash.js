@@ -21,8 +21,9 @@ export default class Splash extends React.Component {
         this.navigateToDashboard = this.navigateToDashboard.bind(this);
     }
 
-    navigateToDashboard(){
-        this.props.navigation.navigate('Home')
+    navigateToDashboard = (userName) =>{
+        console.log(userName)
+        this.props.navigation.navigate('Home', {user_name: userName})
     }
 
     render() {
@@ -30,13 +31,12 @@ export default class Splash extends React.Component {
         <View style={styles.container}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => this.navigateToDashboard()}>
+            onPress={() => this.navigateToDashboard('Hiren')}>
             <Text style={styles.instructions}
-              onPress={() => this.navigateToDashboard()}>
+              onPress={() => this.navigateToDashboard('Hiren')}>
               Click me!
           </Text>
           </TouchableOpacity>
-
           <TextViewComponent/>
         </View>
       );
