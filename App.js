@@ -13,8 +13,8 @@ import {
   TouchableOpacity,
 } from 'react-native'
 import { StackNavigator } from 'react-navigation';
-import Home from './MyApp/Home/Home'
 import Splash from './MyApp/Splash/Splash'
+import Home from './MyApp/Home/Home'
 
 const RootStack = StackNavigator(
   {
