@@ -11,7 +11,6 @@ import {
     Text,
     View,
     Alert,
-    TouchableOpacity,
 } from 'react-native'
 
 export default class ContactDetails extends React.Component {
@@ -23,12 +22,9 @@ export default class ContactDetails extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity
-                    style={styles.button}>
-                    <Text style={styles.instructions}>
-                        {this.props.navigation.state.params.user_name}
-                    </Text>
-                </TouchableOpacity>
+                <Text style={styles.instructions}>
+                    {this.props.navigation.state.params.user_name}
+                </Text>
             </View>
         );
     }
@@ -38,10 +34,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#F5FCFF',
-    }, button: {
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10,
     },
 });
