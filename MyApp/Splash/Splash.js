@@ -21,25 +21,25 @@ export default class Splash extends React.Component {
         this.navigateToDashboard = this.navigateToDashboard.bind(this);
     }
 
-    navigateToDashboard = (userName) =>{
+    navigateToDashboard = (userName) => {
         console.log(userName)
-        this.props.navigation.navigate('Home', {user_name: userName})
+        this.props.navigation.navigate('Home', { user_name: userName })
     }
 
     render() {
-      return (
-        <View style={styles.container}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => this.navigateToDashboard('Hiren')}>
-            <Text style={styles.instructions}
-              onPress={() => this.navigateToDashboard('Hiren')}>
-              Click me!
+        return (
+            <View style={styles.container}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => this.navigateToDashboard(110)}>
+                    <Text style={styles.instructions}
+                        onPress={() => this.navigateToDashboard(110)}>
+                        Click me!
           </Text>
-          </TouchableOpacity>
-          <TextViewComponent/>
-        </View>
-      );
+                </TouchableOpacity>
+                <TextViewComponent />
+            </View>
+        );
     }
 }
 
