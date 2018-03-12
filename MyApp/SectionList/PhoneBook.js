@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { AppRegistry, SectionList, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, SectionList, StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 
-export default class PhoneBook extends Component {
-
+export default class PhoneBook extends React.Component {
+  state = { animating: true }
   constructor(props) {
     super(props);
     this.navigateToPhoneDetails = this.navigateToPhoneDetails.bind(this)
@@ -13,7 +13,13 @@ export default class PhoneBook extends Component {
     this.props.navigation.navigate('ContactDetails', { user_name: userName })
   }
 
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ animating: false }), 3000);
+  }
+
   render() {
+    console.log(this.state.animating)
     return (
       <View style={styles.container}>
         <SectionList
@@ -26,6 +32,10 @@ export default class PhoneBook extends Component {
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title} </Text>}
           keyExtractor={(item, index) => index}
         />
+        <ActivityIndicator
+          animating={this.state.animating}
+          size="large"
+          color="#0000ff" />
       </View>
     );
   }
