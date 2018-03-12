@@ -13,7 +13,6 @@ export default class PhoneBook extends React.Component {
     this.props.navigation.navigate('ContactDetails', { user_name: userName })
   }
 
-
   componentDidMount() {
     setTimeout(() => this.setState({ animating: false }), 3000);
   }
