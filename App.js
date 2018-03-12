@@ -19,6 +19,7 @@ import ContactList from './MyApp/Contact/ContactList'
 import ContactDetails from './MyApp/Contact/ContactDetails'
 import PhoneBook from './MyApp/SectionList/PhoneBook'
 import FlexSample from './MyApp/ViewSample/FlexSample'
+import TextSample from './MyApp/ViewSample/TextSample'
 
 const RootStack = StackNavigator(
   {
@@ -39,10 +40,13 @@ const RootStack = StackNavigator(
     },
     FlexSample: {
       screen: FlexSample
+    },
+    TextSample: {
+      screen: TextSample
     }
   },
   {
-    initialRouteName: 'FlexSample',
+    initialRouteName: 'TextSample',
   }
 )
 
