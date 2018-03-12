@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import { AppRegistry, SectionList, StyleSheet, Text, View } from 'react-native';
 
 export default class PhoneBook extends Component {
+
+  constructor(props) {
+    super(props);
+    this.navigateToPhoneDetails = this.navigateToPhoneDetails.bind(this)
+  }
+
+  navigateToPhoneDetails = (userName) => {
+    console.log(userName)
+    this.props.navigation.navigate('ContactDetails', { user_name: userName })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -11,7 +22,7 @@ export default class PhoneBook extends Component {
             { title: 'S', data: ['S1', 'S2', 'S3'] },
             { title: 'Z', data: ['Z1', 'Z2', 'Z3', 'Z4'] },
           ]}
-          renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+          renderItem={({ item }) => <Text style={styles.item} onPress={() => this.navigateToPhoneDetails(item)}>{item}</Text>}
           renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title} </Text>}
           keyExtractor={(item, index) => index}
         />
