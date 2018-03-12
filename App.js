@@ -17,6 +17,7 @@ import Splash from './MyApp/Splash/Splash'
 import Home from './MyApp/Home/Home'
 import ContactList from './MyApp/Contact/ContactList'
 import ContactDetails from './MyApp/Contact/ContactDetails'
+import PhoneBook from './MyApp/SectionList/PhoneBook'
 
 const RootStack = StackNavigator(
   {
@@ -32,9 +33,12 @@ const RootStack = StackNavigator(
     ContactDetails: {
       screen: ContactDetails,
     },
+    PhoneBook: {
+      screen: PhoneBook
+    }
   },
   {
-    initialRouteName: 'ContactList',
+    initialRouteName: 'PhoneBook',
   }
 )
 
