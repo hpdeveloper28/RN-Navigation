@@ -24,15 +24,14 @@ export default class ContactList extends Component {
       <View style={styles.container}>
         <FlatList
           data={[
-            {key: 'Hiren'},
-            {key: 'Mahesh'},
-            {key: 'Jayesh'},
-            {key: 'Utsav'},
-            {key: 'Bhargav'},
-            {key: 'Shubham'},
-            {key: 'Archit'},
-            {key: 'Altaf'},
-            {key: 'Punit'},
+            {key: 'Android'},
+            {key: 'iOS'},
+            {key: 'React Native'},
+            {key: 'Php'},
+            {key: 'Java'},
+            {key: 'Kotlin'},
+            {key: 'Swift'},
+            {key: '.Net'},
           ]}
           renderItem={({item}) => <Text style={styles.item}
           onPress={() => this.navigateToDashboard(item.key)}>{item.key}</Text>}
