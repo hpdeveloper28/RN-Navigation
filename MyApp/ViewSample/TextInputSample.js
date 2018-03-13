@@ -18,6 +18,10 @@ export default class TextInputSample extends React.Component {
         return (
             <View>
                 <TextInput
+                    editable={true}
+                    numberOfLines={2}
+                    maxLength={100}
+                    multiline={true}
                     style={styles.textInputUserName}
                     placeholder='Please enter username'
                     value={username}
