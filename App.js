@@ -20,6 +20,7 @@ import ContactDetails from './MyApp/Contact/ContactDetails'
 import PhoneBook from './MyApp/SectionList/PhoneBook'
 import FlexSample from './MyApp/ViewSample/FlexSample'
 import TextSample from './MyApp/ViewSample/TextSample'
+import ImageViewSample from './MyApp/ViewSample/ImageViewSample'
 
 const RootStack = StackNavigator(
   {
@@ -43,10 +44,13 @@ const RootStack = StackNavigator(
     },
     TextSample: {
       screen: TextSample
+    },
+    ImageViewSample: {
+      screen: ImageViewSample
     }
   },
   {
-    initialRouteName: 'TextSample',
+    initialRouteName: 'ImageViewSample',
   }
 )
 
