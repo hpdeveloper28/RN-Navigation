@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Slider, Button } from 'react-native';
+import { View, Slider, Text } from 'react-native';
 
 export default class SliderSample extends React.Component {
 
@@ -30,11 +30,10 @@ export default class SliderSample extends React.Component {
                     thumbTintColor='red'
                     onValueChange={(value) => this.setState({ value })}>
                 </Slider>
-                <Button
-                    onPress={this.onButtonPress}
-                    title="Get current progress"
-                    color="#841584">
-                </Button>
+                <Text
+                    onPress={this.onButtonPress}>
+                    {this.state.value}
+                </Text>
             </View>
         )
     }
