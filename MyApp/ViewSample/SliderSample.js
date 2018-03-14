@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import { View, Slider } from 'react-native';
+import { View, Slider, Button } from 'react-native';
 
 export default class SliderSample extends React.Component {
 
+    state = { value: '' }
+
     constructor(props) {
         super(props);
+        this.onButtonPress = this.onButtonPress.bind(this)
     }
 
+    onButtonPress() {
+        console.log('Current progress: ' + this.state.value)
+    }
+
+
     render() {
+        let { value } = this.state
         return (
             <View style={{
                 flex: 1,
@@ -18,8 +27,14 @@ export default class SliderSample extends React.Component {
                     maximumValue={100}
                     minimumTrackTintColor='green'
                     maximumTrackTintColor='blue'
-                    thumbTintColor='red'>
+                    thumbTintColor='red'
+                    onValueChange={(value) => this.setState({ value })}>
                 </Slider>
+                <Button
+                    onPress={this.onButtonPress}
+                    title="Get current progress"
+                    color="#841584">
+                </Button>
             </View>
         )
     }
