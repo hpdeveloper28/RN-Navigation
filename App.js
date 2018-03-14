@@ -26,6 +26,7 @@ import ScrollViewSample from './MyApp/ViewSample/ScrollViewSample'
 import ButtonSample from './MyApp/ViewSample/ButtonSample'
 import PickerSample from './MyApp/ViewSample/PickerSample'
 import SliderSample from './MyApp/ViewSample/SliderSample'
+import SwitchSample from './MyApp/ViewSample/SwitchSample'
 
 const RootStack = StackNavigator(
   {
@@ -67,10 +68,13 @@ const RootStack = StackNavigator(
     },
     SliderSample:{
       screen: SliderSample
+    },
+    SwitchSample:{
+      screen: SwitchSample
     }
   },
   {
-    initialRouteName: 'SliderSample',
+    initialRouteName: 'SwitchSample',
   }
 )
 
