@@ -24,6 +24,7 @@ import ImageViewSample from './MyApp/ViewSample/ImageViewSample'
 import TextInputSample from './MyApp/ViewSample/TextInputSample'
 import ScrollViewSample from './MyApp/ViewSample/ScrollViewSample'
 import ButtonSample from './MyApp/ViewSample/ButtonSample'
+import PickerSample from './MyApp/ViewSample/PickerSample'
 
 const RootStack = StackNavigator(
   {
@@ -59,10 +60,13 @@ const RootStack = StackNavigator(
     },
     ButtonSample: {
       screen: ButtonSample
+    },
+    PickerSample: {
+      screen: PickerSample
     }
   },
   {
-    initialRouteName: 'ButtonSample',
+    initialRouteName: 'PickerSample',
   }
 )
 
