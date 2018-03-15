@@ -5,6 +5,13 @@ export default class ProgressbarSample extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = { progress: 0 }
+
+        setInterval(() => {
+            this.setState({
+                progress: this.state.progress + 0.1
+            });
+        }, 1000);
     }
 
     help() {
@@ -12,11 +19,13 @@ export default class ProgressbarSample extends React.Component {
     }
 
     render() {
+        let { progress } = this.state
         return (
             <View>
                 <ProgressBarAndroid
                     color='red'
-                    indeterminate={true}
+                    indeterminate={false}
+                    progress={this.state.progress}
                     styleAttr='Horizontal'>
                 </ProgressBarAndroid>
             </View>
