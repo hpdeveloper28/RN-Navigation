@@ -28,6 +28,7 @@ import PickerSample from './MyApp/ViewSample/PickerSample'
 import SliderSample from './MyApp/ViewSample/SliderSample'
 import SwitchSample from './MyApp/ViewSample/SwitchSample'
 import BackPressEventSample from './MyApp/Events/BackPressEventSample'
+import DrawerLayoutSample from './MyApp/ViewSample/DrawerLayoutSample'
 
 const RootStack = StackNavigator(
   {
@@ -75,10 +76,13 @@ const RootStack = StackNavigator(
     },
     BackPressEventSample: {
       screen: BackPressEventSample
+    },
+    DrawerLayoutSample: {
+      screen: DrawerLayoutSample
     }
   },
   {
-    initialRouteName: 'BackPressEventSample',
+    initialRouteName: 'DrawerLayoutSample',
   }
 )
 
