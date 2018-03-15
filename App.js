@@ -30,6 +30,7 @@ import SwitchSample from './MyApp/ViewSample/SwitchSample'
 import BackPressEventSample from './MyApp/Events/BackPressEventSample'
 import DrawerLayoutSample from './MyApp/ViewSample/DrawerLayoutSample'
 import ViewPagerSample from './MyApp/ViewSample/ViewPagerSample'
+import ProgressbarSample from './MyApp/ViewSample/ProgressbarSample'
 
 const RootStack = StackNavigator(
   {
@@ -83,10 +84,13 @@ const RootStack = StackNavigator(
     },
     ViewPagerSample: {
       screen: ViewPagerSample
+    },
+    ProgressbarSample: {
+      screen: ProgressbarSample
     }
   },
   {
-    initialRouteName: 'ViewPagerSample',
+    initialRouteName: 'ProgressbarSample',
   }
 )
 
