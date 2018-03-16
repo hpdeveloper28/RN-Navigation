@@ -31,6 +31,7 @@ import BackPressEventSample from './MyApp/Events/BackPressEventSample'
 import DrawerLayoutSample from './MyApp/ViewSample/DrawerLayoutSample'
 import ViewPagerSample from './MyApp/ViewSample/ViewPagerSample'
 import ProgressbarSample from './MyApp/ViewSample/ProgressbarSample'
+import RuntimePermissionSample from './MyApp/Permissions/RuntimePermissionSample'
 
 const RootStack = StackNavigator(
   {
@@ -87,10 +88,13 @@ const RootStack = StackNavigator(
     },
     ProgressbarSample: {
       screen: ProgressbarSample
+    },
+    RuntimePermissionSample: {
+      screen: RuntimePermissionSample
     }
   },
   {
-    initialRouteName: 'ProgressbarSample',
+    initialRouteName: 'RuntimePermissionSample',
   }
 )
 
