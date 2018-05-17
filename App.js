@@ -32,6 +32,7 @@ import DrawerLayoutSample from './MyApp/ViewSample/DrawerLayoutSample'
 import ViewPagerSample from './MyApp/ViewSample/ViewPagerSample'
 import ProgressbarSample from './MyApp/ViewSample/ProgressbarSample'
 import RuntimePermissionSample from './MyApp/Permissions/RuntimePermissionSample'
+import DatePickerSample from './MyApp/Picker/DatePickerSample'
 
 const RootStack = StackNavigator(
   {
@@ -91,10 +92,13 @@ const RootStack = StackNavigator(
     },
     RuntimePermissionSample: {
       screen: RuntimePermissionSample
+    },
+    DatePickerSample: {
+      screen: DatePickerSample
     }
   },
   {
-    initialRouteName: 'RuntimePermissionSample',
+    initialRouteName: 'Splash',
   }
 )
 
