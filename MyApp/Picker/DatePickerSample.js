@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, DatePickerAndroid, StyleSheet } from 'react-native';
+import {View, DatePickerAndroid, StyleSheet } from 'react-native';
 
 export default class DatePickerSample extends React.Component {
 
