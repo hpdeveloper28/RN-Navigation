@@ -10,7 +10,7 @@ export default class ActivityIndicatorSample extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ActivityIndicator size="large" color="#0000ff" />
+                <ActivityIndicator size= "large" color = "#0000ff" />
             </View>
         )
     }
