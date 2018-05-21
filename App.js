@@ -34,6 +34,7 @@ import ProgressbarSample from './MyApp/ViewSample/ProgressbarSample'
 import RuntimePermissionSample from './MyApp/Permissions/RuntimePermissionSample'
 import DatePickerSample from './MyApp/Picker/DatePickerSample'
 import ToolbarAndroidSample from './MyApp/ViewSample/ToolbarSample'
+import ActivityIndicatorSample from './MyApp/ViewSample/ActivityIndicatorSample'
 
 const RootStack = StackNavigator(
   {
@@ -99,10 +100,13 @@ const RootStack = StackNavigator(
     },
     ToolbarAndroidSample: {
       screen: ToolbarAndroidSample
+    },
+    ActivityIndicatorSample: {
+      screen: ActivityIndicatorSample
     }
   },
   {
-    initialRouteName: 'DatePickerSample',
+    initialRouteName: 'ActivityIndicatorSample',
   }
 )
 
