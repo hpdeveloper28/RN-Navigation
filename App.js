@@ -35,6 +35,7 @@ import RuntimePermissionSample from './MyApp/Permissions/RuntimePermissionSample
 import DatePickerSample from './MyApp/Picker/DatePickerSample'
 import ToolbarAndroidSample from './MyApp/ViewSample/ToolbarSample'
 import ActivityIndicatorSample from './MyApp/ViewSample/ActivityIndicatorSample'
+import RefreshControlSample from './MyApp/ViewSample/RefreshControlSample'
 
 const RootStack = StackNavigator(
   {
@@ -103,10 +104,13 @@ const RootStack = StackNavigator(
     },
     ActivityIndicatorSample: {
       screen: ActivityIndicatorSample
+    },
+    RefreshControlSample: {
+      screen: RefreshControlSample
     }
   },
   {
-    initialRouteName: 'ActivityIndicatorSample',
+    initialRouteName: 'RefreshControlSample',
   }
 )
 
