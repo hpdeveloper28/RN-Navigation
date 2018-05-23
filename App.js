@@ -36,6 +36,7 @@ import DatePickerSample from './MyApp/Picker/DatePickerSample'
 import ToolbarAndroidSample from './MyApp/ViewSample/ToolbarSample'
 import ActivityIndicatorSample from './MyApp/ViewSample/ActivityIndicatorSample'
 import RefreshControlSample from './MyApp/ViewSample/RefreshControlSample'
+import WebViewSample from './MyApp/ViewSample/WebViewSample'
 
 const RootStack = StackNavigator(
   {
@@ -107,10 +108,13 @@ const RootStack = StackNavigator(
     },
     RefreshControlSample: {
       screen: RefreshControlSample
+    },
+    WebViewSample: {
+      screen: WebViewSample
     }
   },
   {
-    initialRouteName: 'RefreshControlSample',
+    initialRouteName: "WebViewSample",
   }
 )
 
