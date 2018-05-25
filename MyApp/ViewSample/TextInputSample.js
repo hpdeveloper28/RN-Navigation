@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TextInput, Text, StyleSheet } from 'react-native';
+import { View, TextInput, Text, StyleSheet, Alert } from 'react-native';
 
 export default class TextInputSample extends React.Component {
 
@@ -11,6 +11,7 @@ export default class TextInputSample extends React.Component {
 
     onFormSubmit() {
         console.log(this.state.username + "-" + this.state.password)
+        alert(this.state.username + "-" + this.state.password);
     }
 
     render() {

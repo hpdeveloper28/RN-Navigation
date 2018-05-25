@@ -38,6 +38,7 @@ import ActivityIndicatorSample from './MyApp/ViewSample/ActivityIndicatorSample'
 import RefreshControlSample from './MyApp/ViewSample/RefreshControlSample'
 import WebViewSample from './MyApp/ViewSample/WebViewSample'
 import AppStateSample from './MyApp/apis/AppStateSample'
+import AsyncStorageSample from './MyApp/apis/AsyncStorageSample'
 
 const RootStack = StackNavigator(
   {
@@ -115,10 +116,13 @@ const RootStack = StackNavigator(
     },
     AppStateSample: {
       screen: AppStateSample
+    },
+    AsyncStorageSample: {
+      screen: AsyncStorageSample
     }
   },
   {
-    initialRouteName: "AppStateSample",
+    initialRouteName: "AsyncStorageSample",
   }
 )
 
