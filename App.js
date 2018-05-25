@@ -37,6 +37,7 @@ import ToolbarAndroidSample from './MyApp/ViewSample/ToolbarSample'
 import ActivityIndicatorSample from './MyApp/ViewSample/ActivityIndicatorSample'
 import RefreshControlSample from './MyApp/ViewSample/RefreshControlSample'
 import WebViewSample from './MyApp/ViewSample/WebViewSample'
+import AppStateSample from './MyApp/apis/AppStateSample'
 
 const RootStack = StackNavigator(
   {
@@ -111,10 +112,13 @@ const RootStack = StackNavigator(
     },
     WebViewSample: {
       screen: WebViewSample
+    },
+    AppStateSample: {
+      screen: AppStateSample
     }
   },
   {
-    initialRouteName: "WebViewSample",
+    initialRouteName: "AppStateSample",
   }
 )
 
