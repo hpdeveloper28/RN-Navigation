@@ -39,6 +39,7 @@ import RefreshControlSample from './MyApp/ViewSample/RefreshControlSample'
 import WebViewSample from './MyApp/ViewSample/WebViewSample'
 import AppStateSample from './MyApp/apis/AppStateSample'
 import AsyncStorageSample from './MyApp/apis/AsyncStorageSample'
+import ClipboardSample from './MyApp/apis/ClipboardSample'
 
 const RootStack = StackNavigator(
   {
@@ -119,10 +120,13 @@ const RootStack = StackNavigator(
     },
     AsyncStorageSample: {
       screen: AsyncStorageSample
+    },
+    ClipboardSample: {
+      screen: ClipboardSample
     }
   },
   {
-    initialRouteName: "AsyncStorageSample",
+    initialRouteName: "ClipboardSample",
   }
 )
 
