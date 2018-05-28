@@ -29,7 +29,7 @@ export default class ClipboardSample extends React.Component {
             <View style={styles.container}>
                 <TextInput
                     style={styles.textInputUserName}
-                    placeholder='Please user id'
+                    placeholder='Please enter message'
                     value={message}
                     secureTextEntry={false}
                     onChangeText={(message) => this.setState({ message })}

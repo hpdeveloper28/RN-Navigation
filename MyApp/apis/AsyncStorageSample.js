@@ -29,7 +29,7 @@ export default class AsyncStorageSample extends React.Component {
             <View style={styles.container}>
                 <TextInput
                     style={styles.textInputUserName}
-                    placeholder='Please user id'
+                    placeholder='Please enter user id'
                     value={userId}
                     secureTextEntry={false}
                     onChangeText={(userId) => this.setState({ userId })}
