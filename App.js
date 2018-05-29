@@ -40,6 +40,7 @@ import WebViewSample from './MyApp/ViewSample/WebViewSample'
 import AppStateSample from './MyApp/apis/AppStateSample'
 import AsyncStorageSample from './MyApp/apis/AsyncStorageSample'
 import ClipboardSample from './MyApp/apis/ClipboardSample'
+import KeyboardSample from './MyApp/apis/KeyboardSample'
 
 const RootStack = StackNavigator(
   {
@@ -123,10 +124,13 @@ const RootStack = StackNavigator(
     },
     ClipboardSample: {
       screen: ClipboardSample
+    },
+    KeyboardSample: {
+      screen: KeyboardSample
     }
   },
   {
-    initialRouteName: "ClipboardSample",
+    initialRouteName: "KeyboardSample",
   }
 )
 
