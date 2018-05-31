@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
     welcomeText: {
         margin: 20,
-        textColor: 'green',
+        color: 'green',
         fontStyle: 'italic',
         fontWeight: 'bold'
     }
