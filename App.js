@@ -42,6 +42,7 @@ import AsyncStorageSample from './MyApp/apis/AsyncStorageSample'
 import ClipboardSample from './MyApp/apis/ClipboardSample'
 import KeyboardSample from './MyApp/apis/KeyboardSample'
 import LayoutPropsSample from './MyApp/apis/LayoutPropsSample'
+import LayoutAnimationSample from './MyApp/apis/LayoutAnimationSample'
 
 const RootStack = StackNavigator(
   {
@@ -131,10 +132,13 @@ const RootStack = StackNavigator(
     },
     LayoutPropsSample: {
       screen: LayoutPropsSample
+    },
+    LayoutAnimationSample: {
+      screen: LayoutAnimationSample
     }
   },
   {
-    initialRouteName: "LayoutPropsSample",
+    initialRouteName: "LayoutAnimationSample",
   }
 )
 
