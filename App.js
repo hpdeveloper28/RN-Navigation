@@ -43,6 +43,8 @@ import ClipboardSample from './MyApp/apis/ClipboardSample'
 import KeyboardSample from './MyApp/apis/KeyboardSample'
 import LayoutPropsSample from './MyApp/apis/LayoutPropsSample'
 import LayoutAnimationSample from './MyApp/apis/LayoutAnimationSample'
+import NetInfoSample from './MyApp/apis/NetInfoSample'
+import ShareSample from './MyApp/apis/ShareSample'
 
 const RootStack = StackNavigator(
   {
@@ -135,10 +137,16 @@ const RootStack = StackNavigator(
     },
     LayoutAnimationSample: {
       screen: LayoutAnimationSample
+    },
+    NetInfoSample: {
+      screen: NetInfoSample
+    },
+    ShareSample: {
+      screen: ShareSample
     }
   },
   {
-    initialRouteName: "LayoutAnimationSample",
+    initialRouteName: "ShareSample",
   }
 )
 
