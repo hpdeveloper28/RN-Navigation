@@ -15,7 +15,7 @@ export default class ShareSample extends React.Component {
             url: 'https://stackoverflow.com/users/4233197/hiren-patel'
           }, {
             // Android only, we may leave it as blank
-            dialogTitle: 'Share BAM goodness',
+            dialogTitle: 'Share on',
             // iOS only:
             excludedActivityTypes: [
               'com.apple.UIKit.activity.PostToTwitter'
