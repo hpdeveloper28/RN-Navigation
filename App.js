@@ -45,6 +45,8 @@ import LayoutPropsSample from './MyApp/apis/LayoutPropsSample'
 import LayoutAnimationSample from './MyApp/apis/LayoutAnimationSample'
 import NetInfoSample from './MyApp/apis/NetInfoSample'
 import ShareSample from './MyApp/apis/ShareSample'
+import TimePickerSample from './MyApp/apis/TimePickerSample'
+import WebServiceSample from './MyApp/apis/WebServiceSample'
 
 const RootStack = StackNavigator(
   {
@@ -143,10 +145,16 @@ const RootStack = StackNavigator(
     },
     ShareSample: {
       screen: ShareSample
+    },
+    TimePickerSample: {
+      screen: TimePickerSample
+    },
+    WebServiceSample: {
+      screen: WebServiceSample
     }
   },
   {
-    initialRouteName: "ShareSample",
+    initialRouteName: "WebServiceSample",
   }
 )
 
