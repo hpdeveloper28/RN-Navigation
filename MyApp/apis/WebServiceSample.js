@@ -14,20 +14,44 @@ export default class WebServiceSample extends React.Component {
 
     componentDidMount() {
         // Fetch the data from server when screen loads
-        return fetch('https://facebook.github.io/react-native/movies.json')
-            .then((response) => (response.json()))
+        // return fetch('https://facebook.github.io/react-native/movies.json')
+        //     .then((response) => (response.json()))
+        //     .then((responseJson) => {
+        //         this.setState(
+        //             {
+        //                 isLoading: false,
+        //                 dataSource: responseJson.movies
+        //             }, function () {
+        //                 alert(responseJson.movies[3].title)
+        //             }
+        //         )
+        //     })
+        //     .catch((error) => {
+        //         console.error(error);
+        //     });
+
+        // Modify header and request params
+        return fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyANuBVu3Xv08S1uC0nKD42jO0UQQNaLXms', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                longDynamicLink: 'https://vn3aa.app.goo.gl/?link=https://actify.nl?challengeId%3D12345%26messageId%3D54321&apn=com.actify.actifymove.debug&ibi=com.actify.actifymove.debug',
+            }),
+        }).then((response) => (response.json()))
             .then((responseJson) => {
                 this.setState(
                     {
-                        isLoading: false,
-                        dataSource: responseJson.movies
+                        isLoading: false
                     }, function () {
-                        alert(responseJson.movies[3].title)
+                        alert(responseJson.warning[0].warningCode)
                     }
                 )
             })
             .catch((error) => {
-                console.error(error);
+                console.error(error)
             });
     }
 
