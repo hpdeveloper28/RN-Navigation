@@ -5,50 +5,58 @@ import UserModel from '../models/UserModel'
 export default class AsyncStorageSample extends React.Component {
 
     state = {
-        userId: ''
+        userId: '',
+        password: ''
     }
 
-    async getUserId() {
-        var userObject = await AsyncStorage.getItem('userId')
+    async getUserModel() {
+        var userObject = await AsyncStorage.getItem('user')
         var userModel = JSON.parse(userObject)
-        this.setState({ userId: userModel.userId })
-        alert(userModel.userId)
+        this.setState({ userId: userModel.userId, password: userModel.password })
+        alert(userModel.userId + ' - ' + userModel.password)
     }
 
     constructor(props) {
         super(props);
-        this.getUserId = this.getUserId.bind(this)
-        this.setUserId = this.setUserId.bind(this)
+        this.getUserModel = this.getUserModel.bind(this)
+        this.setUserModel = this.setUserModel.bind(this)
     }
 
-    async setUserId() {
-        var userModel = new UserModel(this.state.userId)
+    async setUserModel() {
+        var userModel = new UserModel(this.state.userId, this.state.password)
         var userObject = JSON.stringify(userModel)
-        await AsyncStorage.setItem('userId', userObject)
-        alert(userModel.userId)
+        await AsyncStorage.setItem('user', userObject)
+        alert(userModel.userId + ' - ' + userModel.password)
     }
 
     render() {
-        let { userId } = this.state
+        let { userId, password } = this.state
         return (
             <View style={styles.container}>
                 <TextInput
-                    style={styles.textInputUserName}
+                    style={styles.textInput}
                     placeholder='Please enter user id'
                     value={userId}
                     secureTextEntry={false}
                     onChangeText={(userId) => this.setState({ userId })}
                 />
+                <TextInput
+                    style={styles.textInput}
+                    placeholder='Please enter password'
+                    value={password}
+                    secureTextEntry={true}
+                    onChangeText={(password) => this.setState({ password })}
+                />
                 <TouchableOpacity
                     style={styles.setButton}
-                    onPress={this.setUserId}>
-                    <Text>Set user ID</Text>
+                    onPress={this.setUserModel}>
+                    <Text>Set user</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.getButton}
-                    onPress={this.getUserId}>
-                    <Text>Get user ID</Text>
+                    onPress={this.getUserModel}>
+                    <Text>Get user</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -61,7 +69,7 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
         justifyContent: 'center'
     },
-    textInputUserName: {
+    textInput: {
         textAlign: 'center',
         color: '#333333',
         padding: 20,
