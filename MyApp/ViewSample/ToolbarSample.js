@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    AppRegistry,
     StyleSheet,
     Text,
     View,
@@ -15,30 +14,24 @@ export default class ToolbarSample extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => this.navigateToDashboard(110)}>
-                    <Text style={styles.instructions}
-                        onPress={() => this.navigateToDashboard(110)}>
-                        Click me!
-          </Text>
-                </TouchableOpacity>
-                <TextViewComponent />
-            </View>
+            <ToolbarAndroid
+            style={styles.toolbar}
+            title="Movies"
+            // navIcon={require('../Resources/Images/icon_react_native.png')}
+            titleColor= "000"
+            actions = {[
+              {title: "Log out", show: "never"}
+            ]}
+            />
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    }, button: {
-        alignItems: 'center',
-        backgroundColor: '#DDDDDD',
-        padding: 10,
-    },
-});
-
+    toolbar: {
+        backgroundColor: '#2196F3',
+        height: 56,
+        alignSelf: 'stretch',
+        textAlign: 'center',
+      }, 
+  });

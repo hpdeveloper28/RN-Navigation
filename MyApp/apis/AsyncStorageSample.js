@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, AsyncStorage, StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
+import UserModel from '../models/UserModel'
 
 export default class AsyncStorageSample extends React.Component {
 
@@ -8,9 +9,10 @@ export default class AsyncStorageSample extends React.Component {
     }
 
     async getUserId() {
-        const userId_ = await AsyncStorage.getItem('userId')
-        this.setState({ userId: userId_ })
-        alert(userId_)
+        var userObject = await AsyncStorage.getItem('userId')
+        var userModel = JSON.parse(userObject)
+        this.setState({ userId: userModel.userId })
+        alert(userModel.userId)
     }
 
     constructor(props) {
@@ -20,7 +22,10 @@ export default class AsyncStorageSample extends React.Component {
     }
 
     async setUserId() {
-        await AsyncStorage.setItem('userId', this.state.userId)
+        var userModel = new UserModel(this.state.userId)
+        var userObject = JSON.stringify(userModel)
+        await AsyncStorage.setItem('userId', userObject)
+        alert(userModel.userId)
     }
 
     render() {

@@ -154,7 +154,7 @@ const RootStack = StackNavigator(
     }
   },
   {
-    initialRouteName: "WebServiceSample",
+    initialRouteName: "AsyncStorageSample",
   }
 )
 
