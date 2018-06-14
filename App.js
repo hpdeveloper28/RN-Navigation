@@ -110,9 +110,6 @@ const RootStack = StackNavigator(
     DatePickerSample: {
       screen: DatePickerSample
     },
-    ToolbarAndroidSample: {
-      screen: ToolbarAndroidSample
-    },
     ActivityIndicatorSample: {
       screen: ActivityIndicatorSample
     },
@@ -150,11 +147,17 @@ const RootStack = StackNavigator(
       screen: TimePickerSample
     },
     WebServiceSample: {
-      screen: WebServiceSample
+      screen: WebServiceSample,
+    },
+    ToolbarAndroidSample: {
+      screen: ToolbarAndroidSample,
+      navigationOptions: {
+        header: null
+      }
     }
   },
   {
-    initialRouteName: "AsyncStorageSample",
+    initialRouteName: "ToolbarAndroidSample",
   }
 )
 
