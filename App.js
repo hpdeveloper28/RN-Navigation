@@ -47,6 +47,7 @@ import NetInfoSample from './MyApp/apis/NetInfoSample'
 import ShareSample from './MyApp/apis/ShareSample'
 import TimePickerSample from './MyApp/apis/TimePickerSample'
 import WebServiceSample from './MyApp/apis/WebServiceSample'
+import ViewPropsSample from './MyApp/ViewSample/ViewPropsSample'
 
 const RootStack = StackNavigator(
   {
@@ -154,10 +155,13 @@ const RootStack = StackNavigator(
       navigationOptions: {
         header: null
       }
-    }
+    },
+    ViewPropsSample: {
+      screen: ViewPropsSample
+    },
   },
   {
-    initialRouteName: "ToolbarAndroidSample",
+    initialRouteName: "ViewPropsSample",
   }
 )
 
