@@ -48,6 +48,7 @@ import ShareSample from './MyApp/apis/ShareSample'
 import TimePickerSample from './MyApp/apis/TimePickerSample'
 import WebServiceSample from './MyApp/apis/WebServiceSample'
 import ViewPropsSample from './MyApp/ViewSample/ViewPropsSample'
+import CanvasSample from './MyApp/Canvas/CanvasSample';
 
 const RootStack = StackNavigator(
   {
@@ -159,9 +160,12 @@ const RootStack = StackNavigator(
     ViewPropsSample: {
       screen: ViewPropsSample
     },
+    CanvasSample: {
+      screen: CanvasSample
+    },
   },
   {
-    initialRouteName: "ViewPropsSample",
+    initialRouteName: "CanvasSample",
   }
 )
 
