@@ -19,7 +19,7 @@ export default class CanvasSample extends React.Component {
     render() {
         return (
             <View>
-                // First it will draw first canvas and start other from first block position
+                {/* First it will draw first canvas and start other from first block position */}
                 <Canvas ref={this.drawSquare1} />
                 <Canvas ref={this.drawSquare2} />
             </View>
