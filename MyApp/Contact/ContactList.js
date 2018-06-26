@@ -11,28 +11,28 @@ export default class ContactList extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { technologyName: '' };
+    this.state = { userName: '' };
     this.navigateToDashboard = this.navigateToDashboard.bind(this);
-    this.onTechnologyFilter = this.onTechnologyFilter.bind(this);
-    filteredTechnologyList = technologyList;
+    this.onUserFilter = this.onUserFilter.bind(this);
+    filteredUserList = userList;
   }
 
-  navigateToDashboard = (technology) => {
-    console.log(technology)
-    this.props.navigation.navigate('ContactDetails', { user_name: technology })
+  navigateToDashboard = (userName) => {
+    console.log(userName)
+    this.props.navigation.navigate('ContactDetails', { user_name: userName })
   }
 
-  onTechnologyFilter = (technologyName) => {
-    this.setState({ technologyName })
-    console.log(technologyName)
+  onUserFilter = (userName) => {
+    this.setState({ userName })
+    console.log(userName)
 
-    filteredTechnologyList = technologyList.filter((item) => {
-      return item.key.toLowerCase().match(technologyName.toLowerCase())
+    filteredUserList = userList.filter((item) => {
+      return item.key.toLowerCase().match(userName.toLowerCase())
     })
   }
 
   render() {
-    let { technologyName } = this.state
+    let { userName } = this.state
     return (
       <View style={styles.container}>
 
@@ -42,12 +42,12 @@ export default class ContactList extends Component {
           maxLength={100}
           multiline={true}
           style={styles.textInputUserName}
-          placeholder='Please enter technology'
-          value={technologyName}
-          onChangeText={(technologyName) => this.onTechnologyFilter(technologyName)}
+          placeholder='Please enter User name'
+          value={userName}
+          onChangeText={(userName) => this.onUserFilter(userName)}
         />
         <FlatList
-          data={filteredTechnologyList}
+          data={filteredUserList}
           renderItem={({ item }) => <Text style={styles.item}
             onPress={() => this.navigateToDashboard(item.key)}>{item.key}</Text>}
         />
@@ -56,9 +56,9 @@ export default class ContactList extends Component {
   }
 }
 
-var filteredTechnologyList = []
+var filteredUserList = []
 
-var technologyList = [
+var userList = [
   { key: 'Android' },
   { key: 'iOS' },
   { key: 'React Native' },
