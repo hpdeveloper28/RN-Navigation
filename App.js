@@ -50,6 +50,7 @@ import WebServiceSample from './MyApp/apis/WebServiceSample'
 import ViewPropsSample from './MyApp/ViewSample/ViewPropsSample'
 import CanvasSample from './MyApp/Canvas/CanvasSample'
 import DrawableCanvasSample from './MyApp/Canvas/DrawableCanvasSample'
+import ListViewSample from './MyApp/ViewSample/ListViewSample';
 
 const RootStack = StackNavigator(
   {
@@ -164,12 +165,15 @@ const RootStack = StackNavigator(
     CanvasSample: {
       screen: CanvasSample
     },
-    DrawableCanvasSample:{
+    DrawableCanvasSample: {
       screen: DrawableCanvasSample
+    },
+    ListViewSample: {
+      screen: ListViewSample
     },
   },
   {
-    initialRouteName: "ContactList",
+    initialRouteName: "ListViewSample",
   }
 )
 
