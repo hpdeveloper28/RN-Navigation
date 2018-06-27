@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    View, ListView, Text
+    View, ListView, Text, StyleSheet
 } from 'react-native';
 
 export default class ListViewSample extends React.Component {
@@ -15,7 +15,11 @@ export default class ListViewSample extends React.Component {
 
     renderRow = (rowData) => {
         return (
-            <Text>{rowData}</Text>
+            <View style={styles.rowContainer}>
+                <Text style={styles.rowText}>{rowData}</Text>
+                <Text style={styles.rowText}>{rowData}</Text>
+                <Text style={styles.rowText}>{rowData}</Text>
+            </View>
         )
     }
 
@@ -29,3 +33,14 @@ export default class ListViewSample extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    rowContainer: {
+        flexDirection: 'row',
+        padding: 10
+    },
+    rowText: {
+        flex: 1,
+        textAlign: 'center'
+    }
+})
