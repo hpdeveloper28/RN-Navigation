@@ -13,11 +13,17 @@ export default class ListViewSample extends React.Component {
         };
     }
 
+    renderRow = (rowData) => {
+        return (
+            <Text>{rowData}</Text>
+        )
+    }
+
     render() {
         return (
             <View>
                 <ListView dataSource={this.state.dataSource}
-                    renderRow={(rowData) => <Text>{rowData}</Text>}>
+                    renderRow={(rowData) => this.renderRow(rowData)}>
                 </ListView>
             </View>
         )
