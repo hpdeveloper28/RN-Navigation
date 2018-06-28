@@ -51,6 +51,7 @@ import ViewPropsSample from './MyApp/ViewSample/ViewPropsSample'
 import CanvasSample from './MyApp/Canvas/CanvasSample'
 import DrawableCanvasSample from './MyApp/Canvas/DrawableCanvasSample'
 import ListViewSample from './MyApp/ViewSample/ListViewSample';
+import GridViewSample from './MyApp/ViewSample/GridViewSample'
 
 const RootStack = StackNavigator(
   {
@@ -171,9 +172,12 @@ const RootStack = StackNavigator(
     ListViewSample: {
       screen: ListViewSample
     },
+    GridViewSample: {
+      screen: GridViewSample
+    },
   },
   {
-    initialRouteName: "ListViewSample",
+    initialRouteName: "GridViewSample",
   }
 )
 
