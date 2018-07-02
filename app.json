@@ -1,5 +1,14 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
-  }
-}
+     "name": "My app",
+     "slug": "my-app",
+     "sdkVersion": "25.0.0",
+     "privacy": "public",
+     "ios": {
+       "bundleIdentifier": "com.rn.awesomeproject"
+     },
+     "android": {
+       "package": "com.rn.awesomeproject"
+     }
+   }
+ }

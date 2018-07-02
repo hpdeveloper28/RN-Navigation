@@ -52,6 +52,8 @@ import CanvasSample from './MyApp/Canvas/CanvasSample'
 import DrawableCanvasSample from './MyApp/Canvas/DrawableCanvasSample'
 import ListViewSample from './MyApp/ViewSample/ListViewSample';
 import GridViewSample from './MyApp/ViewSample/GridViewSample'
+import GoogleMapSample from './MyApp/apis/GoogleMapSample'
+import ViewMarginDynamicSample from './MyApp/ViewSample/ViewMarginDynamicSample'
 
 const RootStack = StackNavigator(
   {
@@ -175,9 +177,15 @@ const RootStack = StackNavigator(
     GridViewSample: {
       screen: GridViewSample
     },
+    GoogleMapSample: {
+      screen: GoogleMapSample
+    },
+    ViewMarginDynamicSample: {
+      screen: ViewMarginDynamicSample
+    }
   },
   {
-    initialRouteName: "GridViewSample",
+    initialRouteName: "ViewMarginDynamicSample",
   }
 )
 
