@@ -54,6 +54,9 @@ import ListViewSample from './MyApp/ViewSample/ListViewSample';
 import GridViewSample from './MyApp/ViewSample/GridViewSample'
 import GoogleMapSample from './MyApp/apis/GoogleMapSample'
 import ViewMarginDynamicSample from './MyApp/ViewSample/ViewMarginDynamicSample'
+import ExpandCollapseViewSample from './MyApp/apis/ExpandCollapseViewSample'
+import BackgroundServiceSample from './MyApp/apis/BackgroundServiceSample'
+import RoundRectImageViewSample from './MyApp/ViewSample/RoundRectImageViewSample'
 
 const RootStack = StackNavigator(
   {
@@ -182,10 +185,19 @@ const RootStack = StackNavigator(
     },
     ViewMarginDynamicSample: {
       screen: ViewMarginDynamicSample
+    },
+    ExpandCollapseViewSample: {
+      screen: ExpandCollapseViewSample
+    },
+    BackgroundServiceSample:{
+      screen: BackgroundServiceSample
+    },
+    RoundRectImageViewSample: {
+      screen: RoundRectImageViewSample
     }
   },
   {
-    initialRouteName: "ViewMarginDynamicSample",
+    initialRouteName: "RoundRectImageViewSample",
   }
 )
 
